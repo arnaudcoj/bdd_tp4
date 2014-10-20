@@ -1,0 +1,18 @@
+--Arnaud Cojez, L3S5, G4, TP4
+
+--E1Q1
+SELECT anom FROM Artists
+       WHERE aid IN (SELECT aid FROM Roles);
+
+--E1Q2
+SELECT titre FROM Films
+       WHERE fid IN (SELECT fid AS nbartists FROM Roles GROUP BY fid HAVING count(aid) >=2);
+
+--E1Q3
+SELECT fid FROM films
+       WHERE aid <> 876
+
+
+--E1Q4
+
+--E1Q5

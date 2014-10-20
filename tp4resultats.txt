@@ -1,0 +1,112 @@
+-- TP4 BDD résultats attendus des requêtes
+
+-- Q1.1
+
+ anom      
+----------------
+ JeanduJardin
+ ChiaraMuti
+ LauraAntonelli
+(3 rows)
+
+ 
+-- Q1.2
+
+titre      
+----------------
+ Cyrano en vrai
+(1 row)
+  
+
+-- Q1.3
+
+ fid 
+-----
+(0 rows)
+
+
+-- Q1.4
+
+
+anom      
+----------------
+ JeanduJardin
+ ChiaraMuti
+ LauraAntonelli
+(3 rows)
+
+ 
+-- Q1.5
+
+fid 
+-----
+   3
+   2
+(2 rows)
+
+-- Q1.6
+
+factotum 
+----------
+(0 rows)
+ 
+-- Q1.7
+
+ anom         
+---------------------
+ MarcelloMastroianni
+ MarcelloMastroianni
+ MarcelloMastroianni
+ JeanduJardin
+ JeanduJardin
+ LauraAntonelli
+ ChiaraMuti
+(7 rows)
+
+-- Q1.8
+
+  anom         
+---------------------
+ MarcelloMastroianni
+(1 row)
+
+-- Q1.9
+
+titre 
+-------
+(0 rows)
+ 
+-- Q1.10
+
+sum  | fid 
+-------+-----
+  9000 |   1
+ 20000 |   3
+(2 rows)
+  
+
+-- Q1.11
+
+titre         | count |          avg          
+-----------------------+-------+-----------------------
+ De rouilles et des os |     1 | 9000.0000000000000000
+ Cyrano en vrai        |     2 |    27750.000000000000
+ Matrix2               |     1 |    20000.000000000000
+(3 rows)
+ 
+ 
+-- Q1.12
+
+ titre      | count |  sum  
+----------------+-------+-------
+ Cyrano en vrai |     2 | 55500
+(1 row)
+
+-- Q1.13
+
+fid | count |  sum  
+-----+-------+-------
+   3 |     1 | 20000
+   2 |     2 | 55500
+(2 rows)
+
