@@ -62,5 +62,4 @@ SELECT anom FROM Artists WHERE aid IN
 SELECT titre FROM Films WHERE fid NOT IN (SELECT fid FROM Roles);
 
 --E1Q10
-(SELECT SUM(cout), fid FROM Roles GROUP BY fid HAVING SUM(cout) < SOME(SELECT SUM(cout) FROM Roles GROUP BY fid));
-
+SELECT SUM(cout), fid FROM Roles GROUP BY fid HAVING SUM(cout) < SOME(SELECT SUM(cout) FROM Roles GROUP BY fid);
