@@ -43,5 +43,11 @@ SELECT fid FROM Films
        	     HAVING SUM(cout) >= 20000);
 
 --E1Q6
-SELECT anom FROM Artists 
-       WHERE aid IN (
+SELECT aid FROM Roles GROUP BY aid HAVING count(fid) <= (SELECT count(fid) FROM Films);
+
+SELECT aid FROM Roles
+EXCEPT
+SELECT aid FROM Roles GROUP BY aid HAVING count(fid) <= (SELECT count(fid) FROM Films);
+
+--E1Q7
+
