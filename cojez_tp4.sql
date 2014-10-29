@@ -53,3 +53,7 @@ SELECT aid FROM Roles GROUP BY aid HAVING count(fid) <= (SELECT count(fid) FROM 
 SELECT realisateur AS aid FROM Films
 UNION ALL
 SELECT aid FROM Roles;
+
+--E1Q8
+SELECT anom FROM Artists WHERE aid IN
+(SELECT realisateur as aid FROM Films GROUP BY aid HAVING count(fid) >= 3);
