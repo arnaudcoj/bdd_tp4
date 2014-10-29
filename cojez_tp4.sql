@@ -70,3 +70,6 @@ SELECT fid, COUNT(aid), AVG(COUT) FROM Roles GROUP BY fid ORDER BY fid;
 --E1Q12
 SELECT fid, COUNT(aid), SUM(cout) FROM Roles GROUP BY fid HAVING count(aid) >=2;
 
+--E1Q13
+
+SELECT fid, COUNT(aid), SUM(cout) FROM Roles WHERE cout > 10000 GROUP BY fid;
