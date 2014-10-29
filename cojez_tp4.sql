@@ -49,5 +49,7 @@ SELECT aid FROM Roles
 EXCEPT
 SELECT aid FROM Roles GROUP BY aid HAVING count(fid) <= (SELECT count(fid) FROM Films);
 
---E1Q7
-
+--E1Q7 
+SELECT realisateur AS aid FROM Films
+UNION ALL
+SELECT aid FROM Roles;
