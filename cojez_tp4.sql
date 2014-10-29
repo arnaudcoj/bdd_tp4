@@ -56,9 +56,11 @@ SELECT aid FROM Roles;
 
 --E1Q8
 SELECT anom FROM Artists WHERE aid IN
-(SELECT realisateur as aid FROM Films GROUP BY aid HAVING count(fid) >= 3);
+(SELECT realisateur as aid FROM Films GROUP BY aid HAVING COUNT(fid) >= 3);
 
 --E1Q9
 SELECT titre FROM Films WHERE fid NOT IN (SELECT fid FROM Roles);
 
+--E1Q10
+(SELECT SUM(cout), fid FROM Roles GROUP BY fid HAVING SUM(cout) < SOME(SELECT SUM(cout) FROM Roles GROUP BY fid));
 
