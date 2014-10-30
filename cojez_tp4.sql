@@ -66,7 +66,8 @@ SELECT titre FROM Films WHERE fid NOT IN (SELECT fid FROM Roles);
 SELECT SUM(cout), fid FROM Roles GROUP BY fid HAVING SUM(cout) < SOME(SELECT SUM(cout) FROM Roles GROUP BY fid);
 
 --E1Q11
-SELECT fid, COUNT(aid), AVG(COUT) FROM Roles GROUP BY fid ORDER BY fid;
+
+SELECT titre, COUNT(aid), AVG(COUT) FROM Films NATURAL JOIN Roles GROUP BY fid ORDER BY fid;
 
 --E1Q12
 SELECT fid, COUNT(aid), SUM(cout) FROM Roles GROUP BY fid HAVING count(aid) >=2;
