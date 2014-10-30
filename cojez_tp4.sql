@@ -50,9 +50,10 @@ EXCEPT
 SELECT aid FROM Roles GROUP BY aid HAVING count(fid) <= (SELECT count(fid) FROM Films);
 
 --E1Q7 
-SELECT realisateur AS aid FROM Films
-UNION ALL
-SELECT aid FROM Roles;
+SELECT anom FROM Artists NATURAL JOIN
+	(SELECT realisateur AS aid FROM Films
+	UNION ALL
+	SELECT aid FROM Roles) AS Actifs;
 
 --E1Q8
 SELECT anom FROM Artists WHERE aid IN
