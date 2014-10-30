@@ -1,4 +1,4 @@
---Arnaud Cojez, L3S5, G4, TP4
+--Arnaud Cojez, L3S5, G4, TP4 BDD
 
 --E1Q1
 SELECT anom FROM Artists
@@ -70,7 +70,7 @@ SELECT SUM(cout), fid FROM Roles GROUP BY fid HAVING SUM(cout) < SOME(SELECT SUM
 SELECT titre, COUNT(aid), AVG(COUT) FROM Films NATURAL JOIN Roles GROUP BY fid ORDER BY fid;
 
 --E1Q12
-SELECT fid, COUNT(aid), SUM(cout) FROM Roles GROUP BY fid HAVING count(aid) >=2;
+SELECT titre, COUNT(aid), SUM(cout) FROM Films NATURAL JOIN Roles GROUP BY fid HAVING count(aid) >=2;
 
 --E1Q13
 

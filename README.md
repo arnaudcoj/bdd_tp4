@@ -1,6 +1,4 @@
-bdd_tp4
+Arnaud Cojez, L3S5, G4
 =======
 
 TP4 BDD Requêtes complexes
-
-Q12, trouver le titre
